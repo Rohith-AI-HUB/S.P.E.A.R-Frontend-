@@ -56,7 +56,7 @@ function RightPanel({ color, htmlCode, cssCode, jsCode, onUpdateCode }) {
   
     try {
       const response = await axios.post(
-        "http://localhost:5000/chat",
+        "https://s-p-e-a-r-backend.onrender.com/chat", // UPDATED BACKEND URL
         { message: inputPrompt, htmlCode, cssCode, jsCode }, // Send current code state
         { headers: { "Content-Type": "application/json" } }
       );
