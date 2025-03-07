@@ -55,7 +55,7 @@ function App() {
   const handleCodeSubmit = async () => {
     if (codePrompt.trim() !== "") {
       try {
-        const response = await axios.post("http://localhost:5000/generate-code", { prompt: codePrompt });
+        const response = await axios.post("https://s-p-e-a-r-backend.onrender.com/generate-code", { prompt: codePrompt });
 
         setHtmlCode(response.data.htmlCode);
         setCssCode(response.data.cssCode);
@@ -73,7 +73,6 @@ function App() {
     setCssCode(updatedCss || cssCode);
     setJsCode(updatedJs || jsCode);
   };
-  
 
   // Toggle Mic for Voice Recognition
   const toggleMic = () => {
